@@ -87,15 +87,7 @@ public class Employee {
         this.passportExpiredDate = passportExpiredDate;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="employer_ID")
-    private Employer employer;
 
-    public Employer getEmployer() {
-        return employer;
-    }
 
-    public void setEmployer(Employer employer) {
-        this.employer = employer;
-    }
+
 }

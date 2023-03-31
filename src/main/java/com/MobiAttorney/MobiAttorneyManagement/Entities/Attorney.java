@@ -74,7 +74,7 @@ public class Attorney {
     private List<Employer> employer = new ArrayList<>();
 */
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "attorney",fetch =FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL,fetch =FetchType.LAZY)
     private List<Employer> employer;
 
     public List<Employer> getEmployer() {

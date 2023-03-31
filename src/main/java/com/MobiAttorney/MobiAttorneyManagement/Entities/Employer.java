@@ -79,20 +79,10 @@ public class Employer {
 
  */
 
-    @ManyToOne
-    @JoinColumn(name="attorney_ID")
-    private Attorney attorney;
-
-    public Attorney getAttorney() {
-        return attorney;
-    }
-
-    public void setAttorney(Attorney attorney) {
-        this.attorney = attorney;
-    }
 
 
-    @OneToMany(cascade =CascadeType.ALL,mappedBy = "employer",fetch = FetchType.LAZY)
+
+    @OneToMany(cascade =CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Employee> employee;
 
     public List<Employee> getEmployee() {
